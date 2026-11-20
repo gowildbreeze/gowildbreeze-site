@@ -39,7 +39,7 @@ const roomDatabase = {
   CA1: {
     hotel: "City Apartment Baku",
     size: "60 m²",
-    images: ["s1b-1.jpg", "s1b-2.jpg", "s1b-3.jpg", "s1b-4.jpg"],
+    images: ["s1b-1.jpeg", "s1b-2.jpeg", "s1b-3.jpeg", "s1b-4.jpeg"],
     details: {
       en: {
         title: "1-Bedroom Standard Apartment (With & Without Balcony)",
@@ -66,7 +66,7 @@ const roomDatabase = {
   CA2: {
     hotel: "City Apartment Baku",
     size: "100 m²",
-    images: ["s2b-1.jpg", "s2b-2.jpg", "s2b-3.jpg", "s2b-4.jpg", "s2b-5.jpg", "s2b-6.jpg"],
+    images: ["s2b-1.jpeg", "s2b-2.jpeg", "s2b-3.jpeg", "s2b-4.jpeg", "s2b-5.jpeg", "s2b-6.jpeg"],
     details: {
       en: {
         title: "2-Bedroom Standard Apartment with Balcony",
@@ -93,7 +93,7 @@ const roomDatabase = {
   CA3: {
     hotel: "City Apartment Baku",
     size: "60 m²",
-    images: ["s2bwl-1.jpg", "s2bwl-2.jpg", "s2bwl-3.jpg", "s2bwl-4.jpg"],
+    images: ["s2bwl-1.jpeg", "s2bwl-2.jpeg", "s2bwl-3.jpeg", "s2bwl-4.jpeg"],
     details: {
       en: {
         title: "2-Bedroom Standard Apartment (Without Living Room)",
@@ -120,7 +120,7 @@ const roomDatabase = {
   CA4: {
     hotel: "City Apartment Baku",
     size: "60 m²",
-    images: ["s1bwt-1.jpg", "s1bwt-2.jpg", "s1bwt-3.jpg", "s1bwt-4.jpg", "s1bwt-5.jpg"],
+    images: ["s1bwt-1.jpeg", "s1bwt-2.jpeg", "s1bwt-3.jpeg", "s1bwt-4.jpeg", "s1bwt-5.jpeg"],
     details: {
       en: {
         title: "1-Bedroom Standard Apartment with Private Terrace",
@@ -147,7 +147,7 @@ const roomDatabase = {
   CA5: {
     hotel: "City Apartment Baku",
     size: "70 m²",
-    images: ["d1b-1.jpg", "d1b-2.jpg", "d1b-3.jpg", "d1b-4.jpg"],
+    images: ["d1b-1.jpeg", "d1b-2.jpeg", "d1b-3.jpeg", "d1b-4.jpeg"],
     details: {
       en: {
         title: "1-Bedroom Deluxe Apartment (Open-Plan & French Balcony)",
@@ -174,7 +174,7 @@ const roomDatabase = {
   CA6: {
     hotel: "City Apartment Baku",
     size: "95 m²",
-    images: ["d2b-1.jpg", "d2b-2.jpg", "d2b-3.jpg", "d2b-4.jpg", "d2b-5.jpg", "d2b-6.jpg"],
+    images: ["d2b-1.jpeg", "d2b-2.jpeg", "d2b-3.jpeg", "d2b-4.jpeg", "d2b-5.jpeg", "d2b-6.jpeg"],
     details: {
       en: {
         title: "2-Bedroom Deluxe Apartment (Open-Plan & French Balcony)",
@@ -201,7 +201,7 @@ const roomDatabase = {
   MH1: {
     hotel: "Miraj Hotel Baku",
     size: "20 m²",
-    images: ["mh1-1.jpg", "mh1-2.jpg", "mh1-3.jpg", "mh1-4.jpg"],
+    images: ["mh1-1.jpeg", "mh1-2.jpeg", "mh1-3.jpeg", "mh1-4.jpeg"],
     details: {
       en: {
         title: "Standard Double Room",
@@ -228,7 +228,7 @@ const roomDatabase = {
   MH2: {
     hotel: "Miraj Hotel Baku",
     size: "27 m²",
-    images: ["mh2-1.jpg", "mh2-2.jpg", "mh2-3.jpg", "mh2-4.jpg"],
+    images: ["mh2-1.jpeg", "mh2-2.jpeg", "mh2-3.jpeg", "mh2-4.jpeg"],
     details: {
       en: {
         title: "Deluxe Double Room",
@@ -255,7 +255,7 @@ const roomDatabase = {
   MH3: {
     hotel: "Miraj Hotel Baku",
     size: "29 m²",
-    images: ["mh3-1.jpg", "mh3-2.jpg", "mh3-3.jpg", "mh3-4.jpg"],
+    images: ["mh3-1.jpeg", "mh3-2.jpeg", "mh3-3.jpeg", "mh3-4.jpeg"],
     details: {
       en: {
         title: "Deluxe Double Room with Balcony",
