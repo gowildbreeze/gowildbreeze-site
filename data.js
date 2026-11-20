@@ -2,7 +2,7 @@
 // WILDBREEZE — DATA & TRANSLATIONS (data.js)
 // ==========================================
 
-// 1. Stikerli Otaq Xüsusiyyətləri (4 Dildə)
+// 1. Otaq Xüsusiyyətləri (4 Dildə)
 const amenities = {
   fridge: { en: "❄️ Refrigerator", az: "❄️ Soyuducu", ru: "❄️ Холодильник", ar: "❄️ ثلاجة" },
   minifridge: { en: "❄️ Mini Refrigerator", az: "❄️ Mini Soyuducu", ru: "❄️ Мини-холодильник", ar: "❄️ ثلاجة صغيرة" },
@@ -20,24 +20,26 @@ const amenities = {
   toiletries: { en: "🧴 Complimentary Toiletries", az: "🧴 Gigiyenik Vasitələr", ru: "🧴 Гигиенические принадлежности", ar: "🧴 مستلزمات استحمام مجانية" }
 };
 
+// City Apartment Baku üçün otaq xüsusiyyətləri siyahısı
 const caFeatures = [
   amenities.fridge, amenities.ac, amenities.microwave, amenities.kitchen,
   amenities.tv, amenities.wifi, amenities.water, amenities.toiletries,
   amenities.linens, amenities.cleaning, amenities.reception, amenities.laundry
 ];
 
+// Miraj Hotel Baku üçün otaq xüsusiyyətləri siyahısı (Standart Otel Konsepti)
 const mhFeatures = [
   amenities.ac, amenities.tv, amenities.wifi, amenities.minifridge,
   amenities.kettle, amenities.water, amenities.toiletries,
   amenities.linens, amenities.cleaning, amenities.reception, amenities.laundry
 ];
 
-// 2. Otaq Kateqoriyaları Bazası (.jpeg uzantıları ilə)
+// 2. Otaq Kateqoriyaları Bazası (CA1-CA6 və MH1-MH3)
 const roomDatabase = {
   CA1: {
     hotel: "City Apartment Baku",
     size: "60 m²",
-    images: ["s1b-1.jpeg", "s1b-2.jpeg", "s1b-3.jpeg", "s1b-4.jpeg"],
+    images: ["s1b-1.jpg", "s1b-2.jpg", "s1b-3.jpg", "s1b-4.jpg"],
     details: {
       en: {
         title: "1-Bedroom Standard Apartment (With & Without Balcony)",
@@ -64,7 +66,7 @@ const roomDatabase = {
   CA2: {
     hotel: "City Apartment Baku",
     size: "100 m²",
-    images: ["s2b-1.jpeg", "s2b-2.jpeg", "s2b-3.jpeg", "s2b-4.jpeg", "s2b-5.jpeg", "s2b-6.jpeg"],
+    images: ["s2b-1.jpg", "s2b-2.jpg", "s2b-3.jpg", "s2b-4.jpg", "s2b-5.jpg", "s2b-6.jpg"],
     details: {
       en: {
         title: "2-Bedroom Standard Apartment with Balcony",
@@ -91,7 +93,7 @@ const roomDatabase = {
   CA3: {
     hotel: "City Apartment Baku",
     size: "60 m²",
-    images: ["s2bwl-1.jpeg", "s2bwl-2.jpeg", "s2bwl-3.jpeg", "s2bwl-4.jpeg"],
+    images: ["s2bwl-1.jpg", "s2bwl-2.jpg", "s2bwl-3.jpg", "s2bwl-4.jpg"],
     details: {
       en: {
         title: "2-Bedroom Standard Apartment (Without Living Room)",
@@ -118,7 +120,7 @@ const roomDatabase = {
   CA4: {
     hotel: "City Apartment Baku",
     size: "60 m²",
-    images: ["s1bwt-1.jpeg", "s1bwt-2.jpeg", "s1bwt-3.jpeg", "s1bwt-4.jpeg", "s1bwt-5.jpeg"],
+    images: ["s1bwt-1.jpg", "s1bwt-2.jpg", "s1bwt-3.jpg", "s1bwt-4.jpg", "s1bwt-5.jpg"],
     details: {
       en: {
         title: "1-Bedroom Standard Apartment with Private Terrace",
@@ -145,7 +147,7 @@ const roomDatabase = {
   CA5: {
     hotel: "City Apartment Baku",
     size: "70 m²",
-    images: ["d1b-1.jpeg", "d1b-2.jpeg", "d1b-3.jpeg", "d1b-4.jpeg"],
+    images: ["d1b-1.jpg", "d1b-2.jpg", "d1b-3.jpg", "d1b-4.jpg"],
     details: {
       en: {
         title: "1-Bedroom Deluxe Apartment (Open-Plan & French Balcony)",
@@ -172,7 +174,7 @@ const roomDatabase = {
   CA6: {
     hotel: "City Apartment Baku",
     size: "95 m²",
-    images: ["d2b-1.jpeg", "d2b-2.jpeg", "d2b-3.jpeg", "d2b-4.jpeg", "d2b-5.jpeg", "d2b-6.jpeg"],
+    images: ["d2b-1.jpg", "d2b-2.jpg", "d2b-3.jpg", "d2b-4.jpg", "d2b-5.jpg", "d2b-6.jpg"],
     details: {
       en: {
         title: "2-Bedroom Deluxe Apartment (Open-Plan & French Balcony)",
@@ -199,7 +201,7 @@ const roomDatabase = {
   MH1: {
     hotel: "Miraj Hotel Baku",
     size: "20 m²",
-    images: ["mh1-1.jpeg", "mh1-2.jpeg", "mh1-3.jpeg", "mh1-4.jpeg"],
+    images: ["mh1-1.jpg", "mh1-2.jpg", "mh1-3.jpg", "mh1-4.jpg"],
     details: {
       en: {
         title: "Standard Double Room",
@@ -207,17 +209,17 @@ const roomDatabase = {
         desc: "Cozy and well-appointed 20 m² hotel room featuring comfortable double bedding, climate control, flat-screen TV, high-speed Wi-Fi, and a modern private bathroom."
       },
       az: {
-        title: "Standart İki Nəfərlik Otaq (Standard Double)",
+        title: "Standart İki Nəfərlik Otaq",
         capacity: "Maksimum Tutum: 2 Böyük • Yataq: 1 İki nəfərlik Çarpayı",
         desc: "Rahat iki nəfərlik çarpayı, kondisioner, düz ekran TV, sürətli Wi-Fi və müasir xüsusi vanna otağı ilə təchiz olunmuş 20 m² standart otel otağı."
       },
       ru: {
-        title: "Стандартный двухместный номер (Standard Double)",
+        title: "Стандартный двухместный номер",
         capacity: "Вместимость: до 2 взрослых • Кровать: 1 двуспальная кровать",
         desc: "Уютный гостиничный номер площадью 20 м² с удобной двуспальной кроватью, кондиционером, телевизором, скоростным Wi-Fi и собственной ванной комнатой."
       },
       ar: {
-        title: "غرفة قياسية مزدوجة (Standard Double)",
+        title: "غرفة قياسية مزدوجة",
         capacity: "السعة القصوى: 2 بالغين • الأسرّة: سرير مزدوج واحد",
         desc: "غرفة فندقية مريحة بمساحة 20 متر مربع مجهزة بسرير مزدوج وتكييف وشاشة تلفزيون وواي فاي سريع وحمام خاص حديث."
       }
@@ -226,7 +228,7 @@ const roomDatabase = {
   MH2: {
     hotel: "Miraj Hotel Baku",
     size: "27 m²",
-    images: ["mh2-1.jpeg", "mh2-2.jpeg", "mh2-3.jpeg", "mh2-4.jpeg"],
+    images: ["mh2-1.jpg", "mh2-2.jpg", "mh2-3.jpg", "mh2-4.jpg"],
     details: {
       en: {
         title: "Deluxe Double Room",
@@ -234,17 +236,17 @@ const roomDatabase = {
         desc: "Spacious 27 m² deluxe hotel room offering extra living space, refined boutique decor, king-size bedding, seating area, and 24/7 attentive front desk & housekeeping care."
       },
       az: {
-        title: "Deluxe İki Nəfərlik Otaq (Deluxe Double)",
+        title: "Deluxe İki Nəfərlik Otaq",
         capacity: "Maksimum Tutum: 2 Böyük (+Əlavə yataq imkanı) • Yataq: 1 King Çarpayı",
         desc: "Daha geniş sahəyə (27 m²) malik Deluxe otel otağı. King-size yataq, oturma guşəsi, zərif interyer və 24/7 qeydiyyat masası dəstəyi ilə yüksək komfort təqdim edir."
       },
       ru: {
-        title: "Двухместный номер Делюкс (Deluxe Double)",
+        title: "Двухместный номер Делюкс",
         capacity: "Вместимость: 2 взрослых (+доп. кровать) • Кровать: 1 большая кровать King",
         desc: "Просторный номер Делюкс площадью 27 м² с большой кроватью King-size, зоной отдыха, элегантным интерьером и круглосуточным гостиничным сервисом."
       },
       ar: {
-        title: "غرفة ديلوكس مزدوجة (Deluxe Double)",
+        title: "غرفة ديلوكس مزدوجة",
         capacity: "السعة القصوى: 2 بالغين (+إمكانية سرير إضافي) • الأسرّة: سرير كينج",
         desc: "غرفة ديلوكس واسعة بمساحة 27 متر مربع توفر مساحة إضافية للجلوس وسرير كينج مريح وخدمة فندقية على مدار الساعة."
       }
@@ -253,7 +255,7 @@ const roomDatabase = {
   MH3: {
     hotel: "Miraj Hotel Baku",
     size: "29 m²",
-    images: ["mh3-1.jpeg", "mh3-2.jpeg", "mh3-3.jpeg", "mh3-4.jpeg"],
+    images: ["mh3-1.jpg", "mh3-2.jpg", "mh3-3.jpg", "mh3-4.jpg"],
     details: {
       en: {
         title: "Deluxe Double Room with Balcony",
@@ -287,9 +289,9 @@ const translations = {
     nav_hotels: "Partner Properties",
     nav_services: "Guest Services",
     nav_contact: "Direct Booking",
-    hero_badge: "Baku Hospitality & Accommodation Network",
-    hero_title: "Curated Stays & Seamless Booking Partnerships in Baku",
-    hero_desc: "Wildbreeze connects discerning travelers, corporate guests, and travel agencies with verified hospitality properties in Baku — offering direct booking privileges, transparent rates, and tailored guest support.",
+    hero_badge: "Hospitality & Direct Booking Network",
+    hero_title: "Curated Stays & Seamless Booking Partnerships",
+    hero_desc: "Direct booking privileges, commission-free rates, and 24/7 support connecting travelers and agencies with verified partner properties.",
     hero_cta_primary: "Explore Partner Properties",
     hero_cta_secondary: "Request Availability & Best Rate",
     stat1_title: "Best Direct Rates",
@@ -314,15 +316,15 @@ const translations = {
     verified_partner: "Official Partner",
     rooms_label: "Room Categories (Click to View Details & Photos)",
     click_photo_hint: "Click room to open",
-    room_ca_1: "1. 1-Bedroom Standard Apartment (With / Without Balcony)",
-    room_ca_2: "2. 2-Bedroom Standard Apartment with Balcony",
-    room_ca_3: "3. 2-Bedroom Standard Apartment (Without Living Room)",
-    room_ca_4: "4. 1-Bedroom Standard Apartment with Terrace",
-    room_ca_5: "5. 1-Bedroom Deluxe Apartment (Open-Plan, French Balcony)",
-    room_ca_6: "6. 2-Bedroom Deluxe Apartment (Open-Plan, French Balcony)",
-    room_mh_1: "1. Standard Double Room",
-    room_mh_2: "2. Deluxe Double Room",
-    room_mh_3: "3. Deluxe Double Room with Balcony",
+    room_ca_1: "1-Bedroom Standard Apartment (With / Without Balcony)",
+    room_ca_2: "2-Bedroom Standard Apartment with Balcony",
+    room_ca_3: "2-Bedroom Standard Apartment (Without Living Room)",
+    room_ca_4: "1-Bedroom Standard Apartment with Terrace",
+    room_ca_5: "1-Bedroom Deluxe Apartment (Open-Plan, French Balcony)",
+    room_ca_6: "2-Bedroom Deluxe Apartment (Open-Plan, French Balcony)",
+    room_mh_1: "Standard Double Room",
+    room_mh_2: "Deluxe Double Room",
+    room_mh_3: "Deluxe Double Room with Balcony",
     whatsapp_quick: "WhatsApp Direct",
     inquire_btn: "Request Best Rate →",
     modal_gallery: "Room Photo Gallery",
@@ -375,7 +377,7 @@ const translations = {
     send_modal_desc: "Your reservation details have been formatted. Select your preferred channel for the fastest confirmation:",
     send_whatsapp_btn: "Send via WhatsApp (Instant)",
     send_email_btn: "Send via Official Email",
-    form_success_msg: "Thank you! Your reservation request has been generated and logged.",
+    form_success_msg: "Thank you! Your reservation request has been generated.",
     rights: "All rights reserved."
   },
   az: {
@@ -384,9 +386,9 @@ const translations = {
     nav_hotels: "Tərəfdaş Otellər",
     nav_services: "Əlavə Xidmətlər",
     nav_contact: "Birbaşa Rezervasiya",
-    hero_badge: "Bakı Qonaqpərvərlik və Rezervasiya Şəbəkəsi",
-    hero_title: "Bakıda Seçilmiş Otellər və Birbaşa Rezervasiya Mərkəzi",
-    hero_desc: "Wildbreeze fərdi qonaqları, korporativ müştəriləri və turizm agentliklərini Bakının etibarlı otel və apartamentləri ilə birləşdirərək komissiyasız birbaşa qiymətlər və 24/7 dəstək təqdim edir.",
+    hero_badge: "Qonaqpərvərlik və Birbaşa Rezervasiya Şəbəkəsi",
+    hero_title: "Seçilmiş Otellər və Birbaşa Rezervasiya Mərkəzi",
+    hero_desc: "Fərdi qonaqları, korporativ müştəriləri və turizm agentliklərini etibarlı tərəfdaş otellərlə birləşdirən komissiyasız birbaşa rezervasiya və 24/7 dəstək.",
     hero_cta_primary: "Otellərə və Otaqlara Bax",
     hero_cta_secondary: "Mövcudluğu və Qiyməti Sorğula",
     stat1_title: "Ən Sərfəli Qiymət",
@@ -411,15 +413,15 @@ const translations = {
     verified_partner: "Rəsmi Tərəfdaş",
     rooms_label: "Otaq Kateqoriyaları (Şəkillər və Detallar Üçün Klikləyin)",
     click_photo_hint: "Baxmaq üçün klikləyin",
-    room_ca_1: "1. 1 Yataq Otaqlı Standart Apartament (Balkonlu / Balkonsuz)",
-    room_ca_2: "2. 2 Yataq Otaqlı Standart Apartament (Balkonlu)",
-    room_ca_3: "3. 2 Yataq Otaqlı Standart Apartament (Qonaq Otağı Olmadan)",
-    room_ca_4: "4. 1 Yataq Otaqlı Standart Apartament (Terraslı)",
-    room_ca_5: "5. 1 Yataq Otaqlı Deluxe Apartament (Fransız Balkonlu)",
-    room_ca_6: "6. 2 Yataq Otaqlı Deluxe Apartament (Fransız Balkonlu)",
-    room_mh_1: "1. Standart İki Nəfərlik Otaq (Standard Double)",
-    room_mh_2: "2. Deluxe İki Nəfərlik Otaq (Deluxe Double)",
-    room_mh_3: "3. Balkonlu Deluxe İki Nəfərlik Otaq",
+    room_ca_1: "1 Yataq Otaqlı Standart Apartament (Balkonlu / Balkonsuz)",
+    room_ca_2: "2 Yataq Otaqlı Standart Apartament (Balkonlu)",
+    room_ca_3: "2 Yataq Otaqlı Standart Apartament (Qonaq Otağı Olmadan)",
+    room_ca_4: "1 Yataq Otaqlı Standart Apartament (Terraslı)",
+    room_ca_5: "1 Yataq Otaqlı Deluxe Apartament (Fransız Balkonlu)",
+    room_ca_6: "2 Yataq Otaqlı Deluxe Apartament (Fransız Balkonlu)",
+    room_mh_1: "Standart İki Nəfərlik Otaq",
+    room_mh_2: "Deluxe İki Nəfərlik Otaq",
+    room_mh_3: "Balkonlu Deluxe İki Nəfərlik Otaq",
     whatsapp_quick: "Birbaşa WhatsApp",
     inquire_btn: "Qiymət Sorğula →",
     modal_gallery: "Otaq Qalereyası",
@@ -472,7 +474,7 @@ const translations = {
     send_modal_desc: "Rezervasiya məlumatlarınız şablon halına salındı. Sürətli təsdiq və qiymət təklifi üçün birini seçin:",
     send_whatsapp_btn: "WhatsApp ilə Göndər (Anında)",
     send_email_btn: "Rəsmi E-poçt ilə Göndər",
-    form_success_msg: "Təşəkkür edirik! Rezervasiya sorğunuz hazırlandı və qeydə alındı.",
+    form_success_msg: "Təşəkkür edirik! Rezervasiya sorğunuz hazırlandı.",
     rights: "Bütün hüquqlar qorunur."
   },
   ru: {
@@ -481,9 +483,9 @@ const translations = {
     nav_hotels: "Отели-партнеры",
     nav_services: "Услуги",
     nav_contact: "Прямое бронирование",
-    hero_badge: "Сеть гостеприимства и бронирования в Баку",
-    hero_title: "Избранные отели и прямое бронирование в Баку",
-    hero_desc: "Wildbreeze связывает индивидуальных гостей, корпоративных клиентов и турагентства с проверенными отелями и апартаментами Баку — прямые цены без комиссий и поддержка 24/7.",
+    hero_badge: "Сеть гостеприимства и прямого бронирования",
+    hero_title: "Избранные отели и прямое бронирование",
+    hero_desc: "Прямые цены без комиссий и поддержка 24/7 для индивидуальных гостей, корпоративных клиентов и турагентств.",
     hero_cta_primary: "Смотреть отели и номера",
     hero_cta_secondary: "Запросить наличие и лучшую цену",
     stat1_title: "Лучшие прямые цены",
@@ -508,15 +510,15 @@ const translations = {
     verified_partner: "Официальный партнер",
     rooms_label: "Категории номеров (Нажмите для фото и описания)",
     click_photo_hint: "Нажмите для просмотра",
-    room_ca_1: "1. Стандартные апартаменты с 1 спальней (С балконом / без)",
-    room_ca_2: "2. Стандартные апартаменты с 2 спальнями и балконом",
-    room_ca_3: "3. Стандартные апартаменты с 2 спальнями (Без гостиной)",
-    room_ca_4: "4. Стандартные апартаменты с 1 спальней и террасой",
-    room_ca_5: "5. Делюкс апартаменты с 1 спальней (Французский балкон)",
-    room_ca_6: "6. Делюкс апартаменты с 2 спальнями (Французский балкон)",
-    room_mh_1: "1. Стандартный двухместный номер (Standard Double)",
-    room_mh_2: "2. Двухместный номер Делюкс (Deluxe Double)",
-    room_mh_3: "3. Двухместный номер Делюкс с балконом",
+    room_ca_1: "Стандартные апартаменты с 1 спальней (С балконом / без)",
+    room_ca_2: "Стандартные апартаменты с 2 спальнями и балконом",
+    room_ca_3: "Стандартные апартаменты с 2 спальнями (Без гостиной)",
+    room_ca_4: "Стандартные апартаменты с 1 спальней и террасой",
+    room_ca_5: "Делюкс апартаменты с 1 спальней (Французский балкон)",
+    room_ca_6: "Делюкс апартаменты с 2 спальнями (Французский балкон)",
+    room_mh_1: "Стандартный двухместный номер",
+    room_mh_2: "Двухместный номер Делюкс",
+    room_mh_3: "Двухместный номер Делюкс с балконом",
     whatsapp_quick: "Написать в WhatsApp",
     inquire_btn: "Узнать лучшую цену →",
     modal_gallery: "Фотогалерея номера",
@@ -578,9 +580,9 @@ const translations = {
     nav_hotels: "الفنادق الشريكة",
     nav_services: "خدمات الضيوف",
     nav_contact: "الحجز المباشر",
-    hero_badge: "شبكة الضيافة والحجوزات في باكو",
-    hero_title: "إقامات مختارة وحجز مباشر بأفضل الأسعار في باكو",
-    hero_desc: "تربط Wildbreeze المسافرين والشركات ووكالات السفر بأفضل الفنادق والشقق الفندقية الموثوقة في باكو، مع توفير أسعار مباشرة بدون عمولات ودعم متواصل 24/7.",
+    hero_badge: "شبكة الضيافة والحجز المباشر",
+    hero_title: "إقامات مختارة وحجز مباشر بأفضل الأسعار",
+    hero_desc: "أسعار مباشرة بدون عمولات ودعم متواصل 24/7 يربط المسافرين والشركات ووكالات السفر بأفضل الفنادق الشريكة.",
     hero_cta_primary: "استكشف الفنادق والغرف",
     hero_cta_secondary: "اطلب التوفر وأفضل سعر",
     stat1_title: "أفضل سعر مباشر",
@@ -605,15 +607,15 @@ const translations = {
     verified_partner: "شريك رسمي",
     rooms_label: "فئات الغرف (اضغط لعرض الصور والتفاصيل)",
     click_photo_hint: "اضغط للتفاصيل",
-    room_ca_1: "1. شقة قياسية بغرفة نوم واحدة (مع شرفة / بدون)",
-    room_ca_2: "2. شقة قياسية بغرفتي نوم مع شرفة",
-    room_ca_3: "3. شقة قياسية بغرفتي نوم (بدون غرفة معيشة)",
-    room_ca_4: "4. شقة قياسية بغرفة نوم واحدة مع تراس",
-    room_ca_5: "5. شقة ديلوكس بغرفة نوم واحدة (صالة مفتوحة وشرفة فرنسية)",
-    room_ca_6: "6. شقة ديلوكس بغرفتي نوم (صالة مفتوحة وشرفة فرنسية)",
-    room_mh_1: "1. غرفة قياسية مزدوجة (Standard Double)",
-    room_mh_2: "2. غرفة ديلوكس مزدوجة (Deluxe Double)",
-    room_mh_3: "3. غرفة ديلوكس مزدوجة مع شرفة",
+    room_ca_1: "شقة قياسية بغرفة نوم واحدة (مع شرفة / بدون)",
+    room_ca_2: "شقة قياسية بغرفتي نوم مع شرفة",
+    room_ca_3: "شقة قياسية بغرفتي نوم (بدون غرفة معيشة)",
+    room_ca_4: "شقة قياسية بغرفة نوم واحدة مع تراس",
+    room_ca_5: "شقة ديلوكس بغرفة نوم واحدة (صالة مفتوحة وشرفة فرنسية)",
+    room_ca_6: "شقة ديلوكس بغرفتي نوم (صالة مفتوحة وشرفة فرنسية)",
+    room_mh_1: "غرفة قياسية مزدوجة",
+    room_mh_2: "غرفة ديلوكس مزدوجة",
+    room_mh_3: "غرفة ديلوكس مزدوجة مع شرفة",
     whatsapp_quick: "تواصل عبر واتساب",
     inquire_btn: "اطلب أفضل سعر ←",
     modal_gallery: "معرض صور الغرفة",
@@ -666,7 +668,7 @@ const translations = {
     send_modal_desc: "تم تجهيز تفاصيل حجزك. اختر القناة المفضلة للحصول على تأكيد وسعر فوري:",
     send_whatsapp_btn: "إرسال عبر واتساب (فوري)",
     send_email_btn: "إرسال عبر البريد الإلكتروني الرسمي",
-    form_success_msg: "شكراً لك! تم تجهيز وتسجيل طلب الحجز الخاص بك.",
+    form_success_msg: "شكراً لك! تم تجهيز طلب الحجز الخاص بك.",
     rights: "جميع الحقوق محفوظة."
   }
 };

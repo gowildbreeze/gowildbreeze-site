@@ -47,12 +47,12 @@ function setLang(lang) {
   htmlEl.setAttribute('lang', lang);
   htmlEl.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
-  // Aktiv dil düyməsinin rəngini yenilə
+  // Aktiv dil düyməsinin rəngini yenilə (Loqo rəngi: brandGreen)
   ['en', 'az', 'ru', 'ar'].forEach((l) => {
     const btn = document.getElementById('btn-' + l);
     if (btn) {
       if (l === lang) {
-        btn.className = 'lang-btn px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-actionBlue text-white shadow-sm';
+        btn.className = 'lang-btn px-2.5 py-1 text-xs font-semibold rounded-md transition-all bg-brandGreen text-white shadow-sm';
       } else {
         btn.className = 'lang-btn px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slateText hover:text-charcoal';
       }
@@ -68,7 +68,7 @@ function setLang(lang) {
     }
   });
 
-  // Gizli dil xanasını yenilə (Netlify üçün)
+  // Gizli dil xanasını yenilə
   const hiddenLangInput = document.getElementById('form-lang-input');
   if (hiddenLangInput) hiddenLangInput.value = lang.toUpperCase();
 
@@ -103,7 +103,7 @@ function openRoomModal(roomKey) {
   const descEl = document.getElementById('modal-room-desc');
   if (descEl) descEl.textContent = rData.desc || '';
 
-  // Otaq imkanlarını (Stikerli Amenities) doldur
+  // Otaq imkanlarını doldur
   const featuresContainer = document.getElementById('modal-features-list');
   if (featuresContainer) {
     const features = room.hotel === 'City Apartment Baku' ? caFeatures : mhFeatures;
@@ -131,7 +131,7 @@ function openRoomModal(roomKey) {
   room.images.forEach((imgSrc, index) => {
     const thumbDiv = document.createElement('div');
     thumbDiv.className = `h-16 rounded-lg overflow-hidden border-2 cursor-pointer transition-all ${
-      index === 0 ? 'border-actionBlue shadow-sm' : 'border-borderGray opacity-75 hover:opacity-100'
+      index === 0 ? 'border-brandGreen shadow-sm' : 'border-borderGray opacity-75 hover:opacity-100'
     }`;
 
     const thumbImg = document.createElement('img');
@@ -148,11 +148,11 @@ function openRoomModal(roomKey) {
     thumbDiv.onclick = () => {
       mainImg.src = thumbImg.src;
       document.querySelectorAll('#modal-thumbnails > div').forEach((d) => {
-        d.classList.remove('border-actionBlue', 'shadow-sm');
+        d.classList.remove('border-brandGreen', 'shadow-sm');
         d.classList.add('border-borderGray', 'opacity-75');
       });
       thumbDiv.classList.remove('border-borderGray', 'opacity-75');
-      thumbDiv.classList.add('border-actionBlue', 'shadow-sm');
+      thumbDiv.classList.add('border-brandGreen', 'shadow-sm');
     };
     thumbContainer.appendChild(thumbDiv);
   });
@@ -226,7 +226,7 @@ function calculateNights(checkin, checkout) {
   return diff > 0 ? diff : 0;
 }
 
-// 6. Rezervasiya Şablonu Generatoru və Göndərmə Seçimi (WhatsApp + Email + Netlify AJAX)
+// 6. Rezervasiya Şablonu Generatoru və Göndərmə Seçimi (WhatsApp + Email)
 function handleReservationSubmit(e) {
   e.preventDefault();
   const form = e.target;
@@ -255,15 +255,15 @@ function handleReservationSubmit(e) {
     `Hello Wildbreeze Reservations Team,`,
     `I would like to request availability and the best direct rate (Book Now, Pay at Check-in):`,
     ``,
-    `🏨 Property: ${property}`,
-    `🛏️ Room Category: ${roomNameEn}`,
-    `📅 Check-in: ${checkin}`,
-    `📅 Check-out: ${checkout}${nightsText}`,
-    `👥 Guests: ${adults} Adults, ${children} Children`,
-    `➕ Add-on Services: ${addonsText}`,
-    `👤 Guest / Agency Name: ${guestName}`,
-    `📞 Contact: ${guestContact}`,
-    `📝 Special Requests: ${notes}`,
+    `Property: ${property}`,
+    `Room Category: ${roomNameEn}`,
+    `Check-in: ${checkin}`,
+    `Check-out: ${checkout}${nightsText}`,
+    `Guests: ${adults} Adults, ${children} Children`,
+    `Add-on Services: ${addonsText}`,
+    `Guest / Agency Name: ${guestName}`,
+    `Contact: ${guestContact}`,
+    `Special Requests: ${notes}`,
     ``,
     `Please confirm availability and total rate for these dates.`
   ];
@@ -274,16 +274,8 @@ function handleReservationSubmit(e) {
   lastGeneratedTemplate.whatsappUrl = `https://wa.me/994553446660?text=${encodeURIComponent(fullText)}`;
   lastGeneratedTemplate.mailtoUrl = `mailto:info@gowildbreeze.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullText)}`;
 
-  // Gizli xülasə xanasına yaz və səssizcə Netlify bazasına göndər (Powered by Netlify ekranı çıxmaması üçün)
   const summaryInput = document.getElementById('formatted-summary-input');
   if (summaryInput) summaryInput.value = fullText;
-
-  const formData = new FormData(form);
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(formData).toString()
-  }).catch(() => {});
 
   // Qonaq üçün WhatsApp / Email seçim pəncərəsini göstər
   const previewBox = document.getElementById('template-preview-text');
@@ -322,7 +314,7 @@ function closeSendChoiceModal() {
   }
 }
 
-// 7. Səhifə Yükləndikdə İనిsializasiya
+// 7. Səhifə Yükləndikdə İnisializasiya
 document.addEventListener('DOMContentLoaded', () => {
   initDatePickers();
 
